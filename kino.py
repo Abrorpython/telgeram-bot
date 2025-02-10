@@ -2,7 +2,7 @@ from aiogram import Bot, Dispatcher, types
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from aiogram.utils import executor
 
-API_TOKEN = '7526119901:AAFL5BP43KzgiGnJv6B8cEVdVTrrWEG9B2U'
+API_TOKEN = '7721986885:AAEh6OZmfKgO2qei9LNYDdEdKmjVg8QY1gc'
 OPEN_CHANNEL = 'karyeralar'  # Kanal username
 
 kino_files = {
