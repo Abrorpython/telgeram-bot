@@ -1,14 +1,12 @@
 from aiogram import Bot, Dispatcher, types
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from aiogram.utils import executor
+from kinos import kino_files
+
 
 API_TOKEN = '7721986885:AAEh6OZmfKgO2qei9LNYDdEdKmjVg8QY1gc'
 OPEN_CHANNEL = 'karyeralar'  # Kanal username
 
-kino_files = {
-    "203": "https://t.me/uzb_kinolar777/7",
-    "KINO2": "HaqiqiyFileID2",
-}
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
@@ -22,7 +20,7 @@ async def start_command(message: types.Message):
         status = await bot.get_chat_member(chat_id=f"@{OPEN_CHANNEL}", user_id=user_id)
         if status.status in ['member', 'administrator', 'creator']:
             # Agar foydalanuvchi obuna bo'lgan bo'lsa
-            await message.reply(
+            await message.answer(
                 "Siz allaqachon kanalga obuna bo‘lgansiz! Endi kino kodini yuboring. Masalan: `203`",
                 parse_mode="Markdown"
             )
